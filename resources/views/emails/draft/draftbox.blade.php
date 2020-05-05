@@ -10,7 +10,6 @@
     <div class="section-body">
         <div class="row">
             @include('emails.sidebar')
-
             <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
                 <div class="card">
                     <div class="boxs mail_listing">
@@ -90,7 +89,8 @@
                                         </td>
                                         <td class="hidden-xs">
                                             @if ($item->subject)
-                                            <a href="{{ asset('/admin/email/'.$item->id) }}">{{$item->subject}}</a>
+                                            <a
+                                                href="{{ asset('/admin/emails/draft/'.$item->id) }}">{{$item->subject}}</a>
                                             @else
                                             <a href="#">No Subject</a>
                                             @endif
@@ -110,22 +110,24 @@
 
                                 </tbody>
                             </table>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-7 ">
-                                <p class="p-15">Showing 1 - @if (Helper::getAll('mailboxs')->where('status','send')->where('user_id',Auth::user()->id)->count()>15)
-                                    15 of {{Helper::getAll('mailboxs')->where('status','send')->where('user_id',Auth::user()->id)->count()}}</p>
-                                    @else
-                                    {{Helper::getAll('mailboxs')->where('status','send')->where('user_id',Auth::user()->id)->count()}} of {{Helper::getAll('mailboxs')->where('status','send')->where('user_id',Auth::user()->id)->count()}} </p>
-                                @endif
+                            <div class="pagination-wrapper"> {!! $emails->links() !!}
+
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-7 ">
+                                    <p class="p-15">Showing 1 -  @if (Helper::getAll('mailboxs')->where('status','draft')->where('user_id',Auth::user()->id)->count()>15)
+                                        15 of {{Helper::getAll('mailboxs')->where('status','draft')->where('user_id',Auth::user()->id)->count()}}</p>
+                                        @else
+                                        {{Helper::getAll('mailboxs')->where('status','draft')->where('user_id',Auth::user()->id)->count()}} of {{Helper::getAll('mailboxs')->where('status','draft')->where('user_id',Auth::user()->id)->count()}} </p>
+                                    @endif
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                </form>
             </div>
-            </form>
         </div>
-    </div>
 </section>
 @endsection
 
@@ -168,5 +170,6 @@
             }
         });
     });
+
 </script>
 @endpush

@@ -1,7 +1,8 @@
 "use strict";
 
 $(window).on("load", function () {
-    $(".loader").fadeOut("slow");
+    // $(".loader").fadeOut(200);
+    $('.loader').fadeOut(300); 
 });
 
 feather.replace();
@@ -683,24 +684,24 @@ $(function () {
     });
 
     // restore default to dark theme
-    $(".btn-restore-theme").on("click", function () {
-        //remove all class from body
-        $("body").removeClass();
-        jQuery("body").addClass("light");
-        jQuery("body").addClass("light-sidebar");
-        jQuery("body").addClass("theme-white");
+    // $(".btn-restore-theme").on("click", function () {
+    //     //remove all class from body
+    //     $("body").removeClass();
+    //     jQuery("body").addClass("dark");
+    //     jQuery("body").addClass("dark-sidebar");
+    //     jQuery("body").addClass("theme-dark");
 
-        // set default theme
-        $(".choose-theme li").removeClass("active");
-        $(".choose-theme li[title|='white']").addClass("active");
+    //     // set default theme
+    //     $(".choose-theme li").removeClass("active");
+    //     $(".choose-theme li[title|='white']").addClass("active");
 
-        $(".select-layout[value|='1']").prop("checked", true);
-        $(".select-sidebar[value|='2']").prop("checked", true);
-        toggle_sidebar_mini(false);
-        $("#mini_sidebar_setting").prop("checked", false);
-        $("#sticky_header_setting").prop("checked", true);
-        toggle_sticky_header(true);
-    });
+    //     $(".select-layout[value|='1']").prop("checked", true);
+    //     $(".select-sidebar[value|='2']").prop("checked", true);
+    //     toggle_sidebar_mini(false);
+    //     $("#mini_sidebar_setting").prop("checked", false);
+    //     $("#sticky_header_setting").prop("checked", true);
+    //     toggle_sticky_header(true);
+    // });
 
     //start up class add
 

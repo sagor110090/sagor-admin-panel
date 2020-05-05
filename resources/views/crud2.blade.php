@@ -224,4 +224,6 @@ div#foreginKeyDiv {
     display: inline-grid;
 }
 </style>
+<link rel="stylesheet" href="{{ asset('assets') }}/css/fontawesome.css">
+
 @endpush

@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Teacher extends Model
+class category extends Model
 {
-    
-    protected $table = 'teachers';
+
+    protected $table = 'categories';
 
     /**
     * The database primary key value.
@@ -17,7 +17,7 @@ class Teacher extends Model
     protected $primaryKey = 'id';
 
 
-    protected $fillable = ['name', 'address', 'phone_no'];
+    protected $fillable = ['name', 'image'];
 
     
 }

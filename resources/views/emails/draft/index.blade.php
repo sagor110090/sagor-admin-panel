@@ -10,7 +10,6 @@
     <div class="section-body">
         <div class="row">
             @include('emails.sidebar')
-
             <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
                 <div class="card">
                     <div class="boxs mail_listing">
@@ -35,27 +34,27 @@
                                     @csrf
                                     <div class="form-group">
                                         <div class="form-line">
-                                            <input type="text" id="email_address" name="email" class="form-control"
+                                        <input type="text" id="email_address" name="email" value="{{$email->from}}" class="form-control"
                                                 required placeholder="TO">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="form-line">
-                                            <input type="text" id="subject" name="subject" class="form-control" required
+                                            <input type="text" id="subject" name="subject" value="{{$email->subject}}" class="form-control" required
                                                 placeholder="Subject">
                                         </div>
                                     </div>
-                                    <textarea class="summernote" id="content" name="content"></textarea>
+                                    <textarea class="summernote" id="content" name="content">{{$email->content}}</textarea>
                                     <div class="compose-editor m-t-20">
-                                        <input type="file" class="default" name="attach" id="attach">
+                                        <input type="file" class="default" value="{{$email->attach}}" name="attach" id="attach">
                                     </div>
                                     <input type="text" hidden name="status" id="status">
                                     <div class="mt-3">
 
                                         <button type="submit" class="btn btn-info btn-border-radius waves-effect"
                                             id="send">Send</button>
-                                        <button type="submit"
-                                            class="btn btn-danger btn-border-radius waves-effect" id="draft">Draft</button>
+                                        <button type="submit" class="btn btn-danger btn-border-radius waves-effect"
+                                            id="draft">Draft</button>
 
                                     </div>
                                 </form>
