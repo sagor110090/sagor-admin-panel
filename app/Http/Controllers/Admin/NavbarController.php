@@ -34,8 +34,8 @@ class NavbarController extends Controller
 
         if ($request->hasFile('image')) {
             $data['image'] = $request->file('image')->storeAS('uploads', rand() . '-' . $request->file('image')->getClientOriginalName());
-            $setImage = 'storage/' . $data['image'];
-            $img = Image::make($setImage)->resize(500, 500)->save($setImage);
+            // $setImage = 'storage/' . $data['image'];
+            // $img = Image::make($setImage)->resize(500, 500)->save($setImage);
             Storage::delete(Auth::user()->image);
         }
 

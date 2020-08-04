@@ -37,3 +37,7 @@ Route::post('/crudMaker', 'HomeController@crudMaker'); //||
 //-----------------------------------------------------------//||
 
 Route::resource('admin/category', 'Admin\\categoryController');
+Route::resource('admin/student', 'Admin\\StudentController');
+Route::resource('admin/teacher-info', 'Admin\\TeacherInfoController');
+Route::resource('admin/person', 'Admin\\PersonController');
+Route::resource('admin/test', 'Admin\\TestController');

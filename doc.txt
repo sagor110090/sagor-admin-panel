@@ -1,4 +1,4 @@
-php artisan db:seed --class=PermissionsTableSeeder
+php artisan db:seed --class=PermissionsSeeder
 
 **slug in Laravel
 
@@ -17,7 +17,9 @@ if ($request->hasFile('image')) {
         Storage::delete(Auth::user()->image);
     }
 
- 
+ if (Storage::delete($person->image)) {
+            $person->delete();
+        }
 
 
     table:

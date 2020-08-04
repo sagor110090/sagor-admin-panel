@@ -8,6 +8,7 @@ use DummyRootNamespace{{modelNamespace}}{{modelName}};
 use Illuminate\Http\Request;
 use Session;
 use Helper;
+use Storage;
 
 class DummyClass extends Controller
 {
