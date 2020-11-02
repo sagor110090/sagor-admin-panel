@@ -21,7 +21,15 @@ if ($request->hasFile('image')) {
             $person->delete();
         }
 
-
+    <select class="form-control selectric" name="subCategory_id">
+        @foreach (\App\SubCategory::all() as $item)
+        <option value="{{$item->id}}" @if(isset($minicategory->subCategory_id))
+            @if($minicategory->subCategory_id == $item->name) selected @endif
+            @endif>
+            {{$item->name}}
+        </option>
+        @endforeach
+    </select>
     table:
     1.Category -- sub-category : one to maney relationship//hasMany--sub_category
         1.name
@@ -93,3 +101,4 @@ if ($request->hasFile('image')) {
         1.user_id
         2.
     12.transaction
+

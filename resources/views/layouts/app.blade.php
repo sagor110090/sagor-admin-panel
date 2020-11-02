@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Admin Dashboard Template || @isset($pageTitle) {{$pageTitle}}@endisset</title>
+    <title> {{ config('app.name') }} || @isset($pageTitle) {{$pageTitle}}@endisset</title>
     <!-- General CSS Files -->
     <link rel="stylesheet" href="{{ asset('assets') }}/css/app.min.css">
 

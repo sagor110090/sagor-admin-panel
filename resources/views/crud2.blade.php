@@ -55,7 +55,7 @@
                                 <option value="time">time</option>
                                 <option value="file">file</option>
                                 <option value="password">password</option>
-                                {{-- <option value="integer#unsigned">integer#unsigned</option> --}}
+                                <option value="integer#unsigned">integer#unsigned</option>
                                 <option value="bigint#unsigned">bigInteger#unsigned</option>
                             </select>
 
