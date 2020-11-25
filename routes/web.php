@@ -40,7 +40,4 @@ Route::post('/crudMaker', 'HomeController@crudMaker'); //||
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::resource('admin/test', 'Admin\\testController');
-Route::resource('admin/test1', 'Admin\\test1Controller');
+Route::get('/home', 'HomeController@index')->name('home'); 
