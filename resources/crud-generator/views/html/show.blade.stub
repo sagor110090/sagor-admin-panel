@@ -10,7 +10,9 @@
     <div class="card-header">{{ __('%%modelName%%') }}</div>
     <div class="card-body">
 
-        <a href="{{ url('/%%routeGroup%%%%viewName%%') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="feather-16" data-feather="arrow-left"></i> {{ __(' Back') }}</button></a>
+        <a href="#" onclick="history.back()" title="Back"><button
+            class="btn btn-warning btn-sm"><i class="feather-16" data-feather="arrow-left"></i> {{ __('Back') }}
+            </button></a>
         @if (Helper::authCheck('%%crudName%%-edit'))
         <a href="{{ url('/%%routeGroup%%%%viewName%%/' . $%%crudNameSingular%%->%%primaryKey%% . '/edit') }}" title="Edit"><button class="btn btn-primary btn-sm"><i class="feather-16" data-feather="edit"></i> {{ __('Edit') }}</button></a>
         @endif

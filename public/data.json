@@ -1,1 +1,1 @@
-{"fields":[{"name":"name","type":"string"},{"name":"email","type":"string"}],"foreign_keys":[],"validations":[{"field":"name","rules":"required"},{"field":"email","rules":"required"}],"relationships":[]}
+{"fields":[{"name":"name","type":"string"},{"name":"address","type":"string"}],"foreign_keys":[],"validations":[{"field":"name","rules":"required"},{"field":"address","rules":"required"}],"relationships":[]}

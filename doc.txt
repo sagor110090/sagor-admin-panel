@@ -1,5 +1,7 @@
 php artisan db:seed --class=PermissionsSeeder
 
+php artisan translation:list-missing-translation-keys
+
 **slug in Laravel
 
 use Illuminate\Support\Str;

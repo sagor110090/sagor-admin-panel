@@ -1,6 +1,13 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
+
+Route::post('locale/', function (Request $request){
+    Session::put('locale', $request->locale);
+    return redirect()->back();
+});
 
 Route::view('/', 'frontEnd.index');
 
@@ -41,3 +48,5 @@ Route::post('/crudMaker', 'HomeController@crudMaker'); //||
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home'); 
+
+Route::resource('admin/student', 'Admin\\StudentController');

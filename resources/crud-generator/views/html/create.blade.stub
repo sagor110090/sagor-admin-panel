@@ -13,7 +13,7 @@
     <div class="card-header">{{ __('Create %%modelName%%') }}</div>
 
 <div class="card-body">
-    <a href="{{ url('/%%routeGroup%%%%viewName%%') }}" title="Back"><button
+    <a href="#" onclick="history.back()" title="Back"><button
             class="btn btn-warning btn-sm"><i class="feather-16" data-feather="arrow-left"></i> {{ __('Back') }}
             </button></a>
     <br /> 
