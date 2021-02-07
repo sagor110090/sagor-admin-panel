@@ -74,7 +74,7 @@
         </li>
         <li class="dropdown"><a href="#" data-toggle="dropdown"
                 class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image"
-                    src="{{ Auth::user()->image ? Storage::url(AUth::user()->image) : asset('assets') . '/img/users/user.png' }}"
+                    src="{{ Auth::user()->image ? Storage::url(Auth::user()->image) : asset('assets') . '/img/users/user.png' }}"
                     class="user-img-radious-style"> <span class="d-sm-none d-lg-inline-block"></span></a>
             <div class="dropdown-menu dropdown-menu-right pullDown">
                 <div class="dropdown-title">Hello {{ Auth::user()->fname . ' ' . Auth::user()->lname }}</div>
